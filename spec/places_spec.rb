@@ -2,6 +2,9 @@ require 'rspec'
 require 'places'
 
 describe(Places) do
+  before() do
+    Places.clear()
+  end
   describe('#location') do
     it('returns the location of the place visited') do
       test_location = Places.new("Cleveland, OH")

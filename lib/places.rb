@@ -6,4 +6,15 @@ class Places
   define_method(:location) do
     @location
   end
+
+  define_singleton_method(:all) do
+    []
+  end
+
+
+
+
+
+
+
 end

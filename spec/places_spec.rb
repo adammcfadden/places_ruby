@@ -13,7 +13,22 @@ describe(Places) do
     it('create an empty array for the places to be saved into') do
       expect(Places.all()).to(eq([]))
     end
-  end     
+  end
+
+  describe('#save') do
+    it('allows a location that has been visited to be stored into array.') do
+      test_location = Places.new("Cleveland, OH")
+      test_location.save()
+      expect(Places.all()).to(eq([test_location]))
+    end
+  end
+  describe('.clear') do
+    it('clear the location list') do
+      expect(Places.clear()).to(eq([]))
+    end
+  end
+
+
 
 
 end

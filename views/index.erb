@@ -1,12 +1,17 @@
-<h1>The places you've been! </h1>
+<h1>The places you've been!</h1>
 
-<p>
-
+<p> Here is the list of places you have visited!
 </p>
+<ul>
+  <% @places.each() do |place| %>
+  <li> <%= place.location() %></li>
+  <% end %>
+</ul>
 
-<form id="form_id" action="index.html" method="post">
-  <div id="name">
-    <label for=""></label>
-    <input type="button" name="some_name" value="">
+<form action="/places" method="post">
+  <div class="form-group">
+    <label for="location">Place you visited</label>
+    <input type="text" id="location" name="location" class="form-control">
   </div>
+  <button type="submit" id="place_submit" class="btn-primary"> Submit! </button>
 </form>

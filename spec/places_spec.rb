@@ -9,5 +9,11 @@ describe(Places) do
     end
   end
 
+  describe('.all') do
+    it('create an empty array for the places to be saved into') do
+      expect(Places.all()).to(eq([]))
+    end
+  end     
+
 
 end
